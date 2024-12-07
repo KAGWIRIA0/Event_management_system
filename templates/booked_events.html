@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Booked Events</title>
+{% endblock %}
+
+{% block extra_css %}
+    <!-- Custom styles for this page -->
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Booked Events</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">All booked events</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Client</th>
+                        <th>Status</th>
+                        <th>Event Date</th>
+                        <th>Booked Date</th>
+                        <th>Mark as Completed</th>
+                        <th>Mark as Cancelled</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Client</th>
+                        <th>Status</th>
+                        <th>Event Date</th>
+                        <th>Booked Date</th>
+                        <th>Mark as Completed</th>
+                        <th>Mark as Cancelled</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for item in booked_events %}
+                        <tr>
+                            <td>{{ event.event.name }}</td>
+                            <td>{{ event.client.name }}</td>
+                            <td>{{ event.status }}</td>
+                            <td>{{ event.event_date | date:"d-m-Y" }}</td>
+                            <td>{{ event.created_at | date:"d-m-Y" }}</td>
+                            <td>
+                                <a href="{% url 'approve_event' item.id %}" class="btn btn-outline-dark btn-sm">Approve</a>
+                            </td>
+                            <td>
+                                <a href="{% url 'cancel_event' item.id %}" class="btn btn-outline-danger btn-sm">Cancel</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <!-- Page level plugins -->
+    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+{% endblock %}

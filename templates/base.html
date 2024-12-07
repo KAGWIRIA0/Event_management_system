@@ -35,60 +35,66 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-event"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">BlissBlend Events</div>
-            </a>
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-event"></i>  
+            </div>
+            <div class="sidebar-brand-text mx-3">BlissBlend Events</div>
+        </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'dashboard' %}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-            
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Home</span></a>
-            </li>
-            
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'event_list' %}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Events</span></a>
-            </li>
-            
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'create_event' %}">
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard' %}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+    
+
+        <hr class="sidebar-divider">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'events_list' %}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Events</span></a>
+        </li>
+
+        <hr class="sidebar-divider">
+        <li class="nav-item">
+            {% for event in events %}
+                <a class="nav-link" href="{% url 'approve_event' event.id %}">
                     <i class="fas fa-fw fa-dollar-sign"></i>
-                    <span>Create Event</span></a>
-            </li>
-            
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'book_consultation' %}">
-                    <i class="fas fa-fw fa-address-book"></i>
-                    <span>Book Consultation</span></a>
-            </li>
-            
+                    <span>Approve Event</span>
+                </a>
+            {% endfor %}
 
- 
+        </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+        <hr class="sidebar-divider">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'booked_events' %}">
+                <i class="fas fa-fw fa-address-book"></i>
+                <span>Booked Events</span></a>
+        </li>
 
+{% if messages %}
+    <div class="alert-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
             <!-- Heading -->
             
 
