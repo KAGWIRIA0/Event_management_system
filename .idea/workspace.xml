@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00641029-8275-478e-ac01-c265a8258174" name="Changes" comment="added event ms">
-      <change afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/approve_event.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/booked_events.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/events_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/book_consultation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_consultation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/create_event.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edit_event.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
-    </list>
+    <list default="true" id="00641029-8275-478e-ac01-c265a8258174" name="Changes" comment="added new files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +115,7 @@
       <updated>1733380627563</updated>
       <workItem from="1733380628659" duration="2673000" />
       <workItem from="1733383427332" duration="2271000" />
-      <workItem from="1733403993630" duration="68770000" />
+      <workItem from="1733403993630" duration="69237000" />
     </task>
     <task id="LOCAL-00001" summary="added event ms">
       <option name="closed" value="true" />
@@ -141,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733422627424</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added new files">
+      <option name="closed" value="true" />
+      <created>1733591018904</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733591018904</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added new files">
+      <option name="closed" value="true" />
+      <created>1733591277643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733591277643</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added event ms" />
-    <option name="LAST_COMMIT_MESSAGE" value="added event ms" />
+    <MESSAGE value="added new files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new files" />
   </component>
 </project>
