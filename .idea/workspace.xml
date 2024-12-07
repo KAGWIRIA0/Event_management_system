@@ -4,24 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00641029-8275-478e-ac01-c265a8258174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/event_ms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/assets/img/favicon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/assets/img/favicon2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/book_consultation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/consultation_success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/create_event.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/delete_event.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_event.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/event_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/event_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+    <list default="true" id="00641029-8275-478e-ac01-c265a8258174" name="Changes" comment="added event ms">
+      <change afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/approve_event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/booked_events.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/events_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/book_consultation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_consultation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/create_event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -38,6 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "KAGWIRIA0"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/KAGWIRIA0/Event_management_system.git",
+    "accountId": "f69512ba-c0d1-47a3-aa3a-646f8fe5ff6c"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -57,6 +68,7 @@
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/HP/PycharmProjects/event_ms/events/assets/img",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -119,11 +131,24 @@
       <updated>1733380627563</updated>
       <workItem from="1733380628659" duration="2673000" />
       <workItem from="1733383427332" duration="2271000" />
-      <workItem from="1733403993630" duration="16199000" />
+      <workItem from="1733403993630" duration="68770000" />
     </task>
+    <task id="LOCAL-00001" summary="added event ms">
+      <option name="closed" value="true" />
+      <created>1733422627424</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733422627424</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added event ms" />
+    <option name="LAST_COMMIT_MESSAGE" value="added event ms" />
   </component>
 </project>
