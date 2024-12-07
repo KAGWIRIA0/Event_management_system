@@ -51,7 +51,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'dashboard' %}">
+            <a class="nav-link" href="{% url 'event_dashboard' %}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -82,16 +82,6 @@
                 <span>Booked Events</span></a>
         </li>
 
-{% if messages %}
-    <div class="alert-container">
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        {% endfor %}
-    </div>
-{% endif %}
 
         <!-- Divider -->
         <hr class="sidebar-divider">
