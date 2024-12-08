@@ -1,80 +1,62 @@
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}Events{% endblock %}
-{% block extra_css %}
-	<!-- Custom styles for this page -->
-    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+{% block title %}
+    <title>Events List</title>
 {% endblock %}
 
 {% block content %}
+    <div class="container mt-4">
+        <h2 class="mb-3">Events List</h2>
 
-{#<ul>#}
-{#    {% for event in events %}#}
-{#        <li><a href="{% url 'event_detail' event.id %}">{{ event.name }}</a></li>#}
-{#    {% endfor %}#}
-{#</ul>#}
-     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Events</h1>
-                    <p class="mb-4">Booked Events</p>
+        <!-- Display success message -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">All Booked Events</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Event Name</th>
-                                            <th>Client</th>
-                                            <th>Number Of Guests</th>
-                                            <th>Event Date</th>
-                                            <th>Status</th>
-                                            <th>Cost</th>
-                                            <th>Approve Event</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Event Name</th>
-                                            <th>Client</th>
-                                            <th>Number Of Guests</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
-                                            <th>Cost</th>
-                                            <th>Approve Event</th>
-                                           
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        {% for event in events %}
-                                          <tr>
-                                              <td>{{ event.event_name }}</td>
-                                              <td>{{ event.client }}</td>
-                                              <td>{{ event.number_of_guests }}</td>
-                                              <td>{{ event.date | date:"d-m-Y"}}</td>
-                                              <td>{{ event.status }}</td>
-                                              <td>{{ event.cost }}</td>
-                                              <td>
-                                                  <a href="{% url 'approve_event' event.id  %}" class="btn btn-outline-dark btn-sm">Approve</a>
-                                              </td>
-                                          </tr>
-                                    {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-{% endblock %}
+        <!-- Action Buttons -->
+        <div class="mb-3">
+            <a href="{% url 'create_event' %}" class="btn btn-primary">Create Event</a>
+        </div>
 
-{% block extra_js %}
-    <!-- Page level plugins -->
-    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Client Id</th>
+                    <th>Details</th>
+                    <th>Status</th>
+                    <th>Cost</th>
+                    <th>Number of Guests</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                    <tr>
+                        
+                        <td>{{ event.event_name }}</td>
+                        <td>{{ event.client_id }}</td>
+                        <td>{{ event.details }}</td>
+                        <td>{{ event.status }}</td>
+                        <td>{{ event.cost }}</td>
+                        <td>{{ event.number_of_guests }}</td>
+                        <td>{{ event.actions }}</td>
+                        
+                        <td>
+                            <!-- Approve Event -->
+                            <a href="{% url 'approve_event' event.id %}" class="btn btn-outline-info btn-sm">Approve</a>
+                            <!-- Cancel Event -->
+                            <a href="{% url 'cancel_event' event.id %}" class="btn btn-outline-danger btn-sm">Cancel</a>
+                            <!-- Edit Event -->
+                            <a href="{% url 'edit_event' event.id %}" class="btn btn-outline-secondary btn-sm">Edit</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
