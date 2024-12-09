@@ -46,7 +46,7 @@
                             <td>{{ consultation.event.name }}</td>
                             <td>{{ consultation.client.title }}</td>
                             <td>{{ consultation.client.phone_number }}</td>
-                            <td>{{ consultation.total_cost }}</td>
+                            <td>{{ consultation.total_amount }}</td>
                             <td>
                                 <a href="{% url 'event_charges' consultation.id %}" class="btn btn-outline-dark btn-sm">Pay</a>
                             </td>
