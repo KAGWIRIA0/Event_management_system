@@ -36,7 +36,6 @@
                         <td>{{ event.name }}</td>
                         <td>{{ event.date }}</td>
                         <td>{{ event.status }}</td>
-                        <td>{{ event.action }}</td>
                         <td>
                             <form action="{% url 'cancel_event' event.id %}" method="post" style="display: inline;">
                                 {% csrf_token %}
